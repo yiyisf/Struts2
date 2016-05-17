@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.multipart.maxSize" value="20000"/>
+    <package name="hello" extends="struts-default">
+        <action name="hello" class="hello.HelloWorldAction"
+                method="exec">
+            <interceptor-ref name="basicStack"/>
+            <result name="success" type="dispatcher">content/HelloWorld.jsp</result>
+            <!--<result name="success" type="freemarker">freemaker/hello.fm</result>-->
+        </action>
+        <action name="upload" class="hello.UploadFile">
+            <result name="success" type="dispatcher">success.jsp</result>
+            <result name="error" type="dispatcher">error.jsp</result>
+        </action>
+
+        <action name="loginaction" class="hello.LoginAction"
+                method="execute">
+            <interceptor-ref name="basicStack"/>
+            <result name="success">welcome.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+    </package>
+</struts>
