@@ -13,5 +13,9 @@
 </head>
 <body>
 欢迎你,<s:property value="name"/>
+<br><br>
+ActionContext: ${applicationScope.ApplicationContextKey} <br><br>
+
+ActionAware: ${applicationScope.ApplicationAwareKey} <br><br>
 </body>
 </html>

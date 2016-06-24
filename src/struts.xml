@@ -15,15 +15,19 @@
             <!--<result name="success" type="freemarker">freemaker/hello.fm</result>-->
         </action>
         <action name="upload" class="hello.UploadFile">
-            <result name="success" type="dispatcher">success.jsp</result>
-            <result name="error" type="dispatcher">error.jsp</result>
+            <result name="success" type="dispatcher">content/success.jsp</result>
+            <result name="error" type="dispatcher">content/error.jsp</result>
         </action>
 
         <action name="loginaction" class="hello.LoginAction"
                 method="execute">
             <interceptor-ref name="basicStack"/>
-            <result name="success">welcome.jsp</result>
-            <result name="error">error.jsp</result>
+            <result name="success">content/welcome.jsp</result>
+            <result name="error">content/error.jsp</result>
+        </action>
+
+        <action name="awarecontext" class="hello.AwareContext">
+            <result>content/welcome.jsp</result>
         </action>
 
     </package>

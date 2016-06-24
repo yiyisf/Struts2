@@ -24,5 +24,10 @@
 <a type="button" href="content/uploadFile.jsp">上传文件</a><br><br>
 
 <a href="content/Login.jsp">登录</a>
+<br><br>
+
+<a href="awarecontext.action">test awarecontext</a>
+
+
 </body>
 </html>
